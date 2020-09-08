@@ -1,0 +1,48 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<div class="container">
+    <div class="row mt-50 mb-30">
+        <div class="col-xs-12">
+            <div class="txt-title mb-20">
+              <p>Customer Management</p>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="center">
+              <div class="card bg-dark mb-30">
+                <div class="card-body">
+                  <h5 class="card-title">Please enter customer data </h5>
+                  <div>
+                    <input type="text" [(ngModel)]="first_name" class="form-control mb-10" placeholder="First name" required aria-label="first_name" maxlength="150" >
+                    <input type="text" [(ngModel)]="last_name"class="form-control mb-10" placeholder="Last name" required aria-label="last_name" maxlength="150">
+                    <input type="text" [(ngModel)]="tel_no" class="form-control mb-10" placeholder="Tel No" aria-label="tel_no" maxlength="10">
+                    <button type="button" class="btn btn-success width-full" (click)="addCustomer()">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <customer-table [data_list]="customers" (onDelCus)="onChildCallback($event)" ></customer-table>
+        </div>
+    </div>
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
